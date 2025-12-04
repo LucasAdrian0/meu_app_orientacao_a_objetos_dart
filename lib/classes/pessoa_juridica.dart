@@ -15,16 +15,16 @@ class PessoaJuridica extends Pessoa {
   PessoaJuridica(
     String nome,
     String endereco,
-    String cnpj,
-    TipoNotificacao tipoNotificacao,
-  ) : super(nome, endereco, tipoNotificacao: tipoNotificacao) {
+    String cnpj, {
+    TipoNotificacao tipoNotificacao = TipoNotificacao.nenhum,
+  }) : super(nome, endereco, tipoNotificacao: tipoNotificacao) {
     _cnpj = cnpj;
   }
 
   @override
   String toString() {
     return {
-      "Tipo": "PF",
+      "Tipo": "PJ",
       "Nome:": super.getNome(),
       "Endereço:": super.getEndereco(),
       "CNPJ:": _cnpj,

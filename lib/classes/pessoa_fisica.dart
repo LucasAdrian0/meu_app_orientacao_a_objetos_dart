@@ -15,9 +15,9 @@ class PessoaFisica extends Pessoa {
   PessoaFisica(
     String nome,
     String endereco,
-    String cpf,
-    TipoNotificacao tipoNotificacao,
-  ) : super(nome, endereco, tipoNotificacao: tipoNotificacao) {
+    String cpf, {
+    TipoNotificacao tipoNotificacao = TipoNotificacao.nenhum,
+  }) : super(nome, endereco, tipoNotificacao: tipoNotificacao) {
     _cfp = cpf;
   }
 
